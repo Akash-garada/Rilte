@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relite Clothing - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: #000; color: #fff; line-height: 1.6; }
+        header { position: fixed; top: 0; width: 100%; background-color: #000; z-index: 1000; padding: 1rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #D4AF37; }
+        .logo { font-size: 1.5rem; font-weight: 600; color: #D4AF37; }
+        nav { display: none; } /* Hidden on mobile */
+        nav ul { list-style: none; display: flex; gap: 2rem; }
+        nav a { color: #fff; text-decoration: none; font-weight: 400; transition: color 0.3s; }
+        nav a:hover { color: #D4AF37; }
+        .hamburger { display: block; cursor: pointer; font-size: 1.5rem; color: #fff; }
+        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://source.unsplash.com/featured/?fashion,clothing'); background-size: cover; background-position: center; padding: 2rem; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; color: #D4AF37; }
+        .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
+        .cta-btn { background-color: #D4AF37; color: #000; padding: 0.75rem 1.5rem; text-decoration: none; font-weight: 600; border-radius: 5px; transition: background 0.3s; }
+        .cta-btn:hover { background-color: #fff; }
+        .featured { padding: 4rem 2rem; text-align: center; }
+        .featured h2 { font-size: 2rem; margin-bottom: 2rem; color: #D4AF37; }
+        .product-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+        .product-card { background-color: #111; padding: 1rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.5); }
+        .product-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 5px; }
+        .product-card h3 { margin: 1rem 0 0.5rem; font-size: 1.2rem; }
+        .product-card p { color: #D4AF37; font-weight: 600; }
+        .product-card .cta-btn { margin-top: 1rem; }
+        footer { text-align: center; padding: 2rem; background-color: #111; color: #fff; }
+        @media (min-width: 768px) {
+            nav { display: block; }
+            .hamburger { display: none; }
+            .hero h1 { font-size: 3rem; }
+            .product-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Relite Clothing</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" onclick="toggleNav()">☰</div>
+    </header>
+    <section class="hero">
+        <h1>Elevate Your Style</h1>
+        <p>Premium fashion for the modern individual.</p>
+        <a href="https://wa.me/1234567890?text=Hi,%20I'd%20like%20to%20place%20an%20order%20from%20Relite%20Clothing." class="cta-btn">Order on WhatsApp</a>
+    </section>
+    <section class="featured">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://source.unsplash.com/featured/?shirt" alt="Premium Shirt">
+                <h3>Premium Shirt</h3>
+                <p>$49.99</p>
+                <a href="https://wa.me/1234567890?text=Hi,%20I'd%20like%20to%20order%20the%20Premium%20Shirt." class="cta-btn">Order on WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="https://source.unsplash.com/featured/?pants" alt="Elegant Pants">
+                <h3>Elegant Pants</h3>
+                <p>$69.99</p>
+                <a href="https://wa.me/1234567890?text=Hi,%20I'd%20like%20to%20order%20the%20Elegant%20Pants." class="cta-btn">Order on WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="https://source.unsplash.com/featured/?jacket" alt="Luxury Jacket">
+                <h3>Luxury Jacket</h3>
+                <p>$129.99</p>
+                <a href="https://wa.me/1234567890?text=Hi,%20I'd%20like%20to%20order%20the%20Luxury%20Jacket." class="cta-btn">Order on WhatsApp</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 Relite Clothing. All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleNav() {
+            const nav = document.querySelector('nav');
+            nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+                            </html>
